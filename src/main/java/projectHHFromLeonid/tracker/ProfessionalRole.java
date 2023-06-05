@@ -1,4 +1,4 @@
-package Vacancies;
+package projectHHFromLeonid.tracker;
 
 
 import javax.persistence.*;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "CONTACTS")
-public class Professional_role {
+@Table(name = "PROFESSIONALROLE")
+public class ProfessionalRole {
 
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
@@ -26,9 +26,10 @@ public class Professional_role {
     private String relation;
 
     @Column
-    private String response_letter_required;
+    private boolean responseLetterRequired;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_vacancies")
     private List<Vacancies> vacancies = new ArrayList<>();
 
 }

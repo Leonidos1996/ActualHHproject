@@ -1,4 +1,4 @@
-package Vacancies;
+package projectHHFromLeonid.tracker;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -15,7 +15,9 @@ public class Area {
     @Column
     private String name;
 
-    @OneToMany
+
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_vacancies")
     private List<Vacancies> vacancies = new ArrayList<>();
 
 }

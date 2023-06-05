@@ -1,11 +1,11 @@
-package Vacancies;
+package projectHHFromLeonid.tracker;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table (name = "METRO")
+@Table (name = "SHEDULE")
 public class Shedule {
 
     @Id
@@ -15,7 +15,8 @@ public class Shedule {
     @Column
     private String name;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_vacancies")
     private List<Vacancies> vacancies = new ArrayList<>();
 
 }

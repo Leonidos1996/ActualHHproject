@@ -1,4 +1,4 @@
-package Vacancies;
+package projectHHFromLeonid.tracker;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

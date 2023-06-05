@@ -1,4 +1,4 @@
-package Vacancies;
+package projectHHFromLeonid.tracker;
 
 
 import javax.persistence.*;
@@ -14,9 +14,10 @@ public class Salary {
     private Integer id;
 
     @Column
-    private String name;
+    private int summ;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_vacancies")
     private List<Vacancies> vacancies = new ArrayList<>();
 
 
