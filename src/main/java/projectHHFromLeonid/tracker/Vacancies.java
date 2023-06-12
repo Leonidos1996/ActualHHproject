@@ -23,4 +23,10 @@ public class Vacancies {
 
     @ManyToOne
     private Address address;
+
+    @ManyToOne
+    private Salary salary;
+    //добавить ссылки на тип, контакты, Ариа
+
+
 }
