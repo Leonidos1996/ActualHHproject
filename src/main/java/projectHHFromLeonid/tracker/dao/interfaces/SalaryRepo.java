@@ -1,7 +1,7 @@
-package JdbcTemplate;
+package projectHHFromLeonid.tracker.dao.interfaces;
 
 import org.springframework.data.repository.CrudRepository;
-import projectHHFromLeonid.tracker.Salary;
+import projectHHFromLeonid.tracker.entity.Salary;
 
 public interface SalaryRepo extends CrudRepository<Salary, Integer> {
     //отвечает работу с БД
